@@ -28,6 +28,8 @@
 :root {
       --light-clr: #fff;
       --dark-clr: #02012B;
+      --dark-clr2: #222222;
+      --dark-clr3: #555555;
       --primary-clr: #19BCE4;
       --bor-rad: 6px;
 }
@@ -58,12 +60,13 @@ body {
       transition: .3s linear;
 }
 
-.base-btn:hover{
+.base-btn:hover {
       background-color: transparent;
       color: var(--primary-clr);
       cursor: pointer;
 }
-.base-btn:active{
+
+.base-btn:active {
       opacity: 0.6;
 }
 
@@ -112,7 +115,8 @@ body {
       color: var(--dark-clr);
       position: relative;
 }
-.nav__list a::after{
+
+.nav__list a::after {
       display: block;
       content: '';
       width: 100%;
@@ -125,21 +129,87 @@ body {
       transform-origin: right;
       transition: transform 0.5s linear;
 }
-.nav__list a:hover::after{
+
+.nav__list a:hover::after {
       transform: scaleX(1);
       transform-origin: left;
 }
-.nav__list a:active{
+
+.nav__list a:active {
       opacity: 0.7;
 }
 
-.nav__btn{
+.nav__btn {
       padding: 11px 25px;
       border-radius: var(--bor-rad);
 }
-.bars{
+
+.bars {
       display: none;
 }
-.bars svg{
+
+.bars svg {
       font-size: 50px;
+}
+
+/* ----- BANNER ----- */
+.banner {
+      padding: 185px 0 140px;
+      background: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+            url('../images/bg-banner.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--light-clr);
+      text-align: center;
+}
+
+.banner__title {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 75.84px;
+      margin-bottom: 24px;
+}
+
+.banner__desc {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 30px;
+      max-width: 622px;
+      margin: 0 auto 97px auto;
+}
+
+.banner__info {
+      width: 100%;
+      background-color: var(--light-clr);
+      padding: 24px;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(259px, 1fr));
+}
+
+.banner__info-item {
+      border: 0.5px solid rgba(25, 187, 228, 0.3);
+      padding: 10px 30px;
+      text-align: start;
+}
+
+.banner__info-item select {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 16.59px;
+      color: var(--dark-clr3);
+      border: none;
+}
+
+.banner__info-item h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 23.7px;
+      color: var(--dark-clr2);
+      margin-top: 8px;
+}
+.banner-btn{
+      width: 100%;
+      padding: 23px 0;
 }

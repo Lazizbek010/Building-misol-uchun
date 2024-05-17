@@ -1,0 +1,27 @@
+@media (max-width:900px){
+      .nav__list{
+            display: none;
+      }
+      .nav__menu{
+            gap: 20px;
+      }
+      .bars{
+            display: block;
+      }
+}
+
+
+@media (max-width:500px){
+      .nav{
+            padding: 20px 0;
+      }
+      .nav .container {
+            flex-direction: column;
+            gap: 20px;
+      }
+      .nav__menu{
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+      }
+}
